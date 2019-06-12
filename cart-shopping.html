@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/plugin/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/plugin/hover-css/hover-min.css">
+        <link rel="stylesheet" href="assets/css/woocommerce.css">
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
@@ -88,7 +89,7 @@
                                         </p>
                                         <p class="mini-cart_buttons">
                                             <a href="cart-shopping.html" class="button hvr-grow-shadow">View</a>
-                                            <a href="#" class="button hvr-grow-shadow">Checkout</a>
+                                            <a href="simplecheckout.html" class="button hvr-grow-shadow">Checkout</a>
                                         </p>
                                     </div>
                                 </div>
@@ -169,164 +170,143 @@
         <section class="container-fluid">
             <div class="container blog-block">
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="single-header">
-                            <div class="penci-standard-cat">
-                                <span class="cat">
-                                    <a href="#" class="penci-cat-name">Travel</a>
-                                </span>
-                            </div>
-                            <h1 class="single-post-title">Visit Orange Garden</h1>
-                            <div class="post-box-meta-single">
-                                <span>
-                                    <time class="entry-date published" datetime="2017-06-03T13:45:54+00:00">June 3, 2017</time>
-                                </span>
-                            </div>
-                            <div class="post-image">
-                                <img src="assets/img/blog/girl-585x390.jpg">
-                            </div>
-                            <div class="post-entry">
-                                <p>   
-                                    Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus et magnis dis
-                                    parturient montes lorem, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque eu, pretium quis, sem. Nulla onsequat massa quis enim. Donec pede justo
-                                    fringilla vel aliquet nec vulputate eget. Lorem ispum dolore siamet ipsum dolor.   
-                                </p>
-                                <p>
-                                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
-                                    nobis est eligendi optio cumquer nihil impedit quo minus id quod maxime placeat facere.
-                                    At vero eos et accusamus et iusto odio dignissimos ducimus quilor.
-                                </p>
-                                <p>
-                                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-                                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                                    Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-                                    porttitor eu, consequat vitae, eleifend ac, enim.
-                                </p>
-                                <h2>LOVE WHAT YOU DO. DO WHAT YOU LOVE</h2>
-                                <p>
-                                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                                    sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit. Vivamus elementum semper
-                                    nisi. Aenean vulputate eleifend tellus.
-                                </p>
-                                <p>
-                                    Rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                                    Integer cidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                                    Aenean leo ligula, porttitor eu, consequat vitae lorem.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="penci_latest_news_widget">
-                            <h4 class="widget-title penci-border-arrow">
-                                <span class="inner-arrow">Recent Posts</span>
-                            </h4>
-                            <div class="side-newsfeed">
-                                <div class="penci-feed">
-                                    <div class="side-item">
-                                        <div class="side-image">
-                                            <a href="#" class="small-fix-size">
-                                                <img src="assets/img/blog/girl-263x175.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="side-item-text">
-                                            <h4 class="side-title-post">
-                                                <a href="#">Memories from Last Summer</a>
-                                            </h4>
-                                            <span class="side-item-meta">
-                                                <time class="entry-date published" datetime="2017-06-07T13:46:15+00:00">June 7, 2017</time>
-                                            </span>
-                                        </div>
-                                    </div>
+                    <div class="site-main col-sm-12 full-width">
+                        <div class="entry-content">
+                            <div class="woocommerce">
+                                <form class="woocommerce-cart-form" action="#" method="post">
+                                    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+                                        <thead>
+                                            <tr>
+                                                <th class="product-thumbnail">&nbsp;</th>
+                                                <th class="product-name">Product</th>
+                                                <th class="product-price">Price</th>
+                                                <th class="product-quantity">Quantity</th>
+                                                <th class="product-subtotal" style="text-align: center;">Total</th>
+                                                <th class="product-remove">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="woocommerce-cart-form__cart-item cart_item">
+                                                <td class="product-remove product-remove-1">
+                                                    <a href="#" class="remove" aria-label="Remove this item">×</a>
+                                                </td>
+                                                <td class="product-thumbnail">
+                                                    <a href="#">
+                                                        <img width="360" height="480" src="assets/img/products/35.png" class="" alt="">
+                                                    </a>
+                                                </td>
+                                                <td class="product-name" data-title="Product">
+                                                    <a href="#">Against aging</a>
+                                                </td>
+                                                <td class="product-price" data-title="Price">
+                                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>60.00</span>
+                                                </td>
+                                                <td class="product-quantity" data-title="Quantity">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="prev btn ">-</button>
+                                                        <button type="button" class="show-number btn ">5</button>
+                                                        <button type="button" class="next btn ">+</button>
+                                                    </div>
+                                                </td>
+                                                <td class="product-subtotal" data-title="Total">
+                                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>240.00</span>
+                                                </td>
+                                                <td class="product-remove product-remove-2">
+                                                    <a href="#" class="remove" aria-label="Remove this item">×</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="woocommerce-cart-form__cart-item cart_item">
+                                                <td class="product-remove product-remove-1">
+                                                    <a href="#" class="remove" aria-label="Remove this item">×</a>
+                                                </td>
+                                                <td class="product-thumbnail">
+                                                    <a href="#"><img width="360" height="480" src="assets/img/products/30255nabor_plastilina_mister_zubastik.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""></a>
+                                                </td>
+                                                <td class="product-name" data-title="Product">
+                                                    <a href="#">Feather Down Jacket</a>
+                                                </td>
+                                                <td class="product-price" data-title="Price">
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        <span class="woocommerce-Price-currencySymbol">$</span>63.00</span>
+                                                </td>
+                                                <td class="product-quantity" data-title="Quantity">
+                                                        <div class="btn-group">
+                                                            <button type="button" class="prev btn ">-</button>
+                                                            <button type="button" class="show-number btn ">1</button>
+                                                            <button type="button" class="next btn ">+</button>
+                                                        </div>
+                                                </td>
+                                                <td class="product-subtotal" data-title="Total">
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        <span class="woocommerce-Price-currencySymbol">$</span>63.00</span>
+                                                </td>
+                                                <td class="product-remove product-remove-2">
+                                                    <a href="#" class="remove" aria-label="Remove this item">×</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="6" class="actions">
+                                                    <div class="clear-all">
+                                                        <a href="#"> Clear All</a>
+                                                    </div>
 
-                                    <div class="side-item">
-                                        <div class="side-image">
-                                            <a href="#" class="small-fix-size">
-                                                <img src="assets/img/blog/girl2-263x175.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="side-item-text">
-                                            <h4 class="side-title-post">
-                                                <a href="#">Memories from Last Summer</a>
-                                            </h4>
-                                            <span class="side-item-meta">
-                                                <time class="entry-date published" datetime="2017-06-07T13:46:15+00:00">June 7, 2017</time>
-                                            </span>
-                                        </div>
-                                    </div>
+                                                    <div class="update-cart">
+                                                        <button>Update Cart <i class="fas fa-sync-alt"></i></button>
+                                                    </div>
+                                                    <div style="clear: both;"></div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </form>
+                                <div class="cart-collaterals">
+                                    <div class="cart_totals ">
+                                        <h2>Cart totals</h2>
+                                        <table class="shop_table shop_table_responsive">
+                                            <tbody>
+                                            <tr class="cart-subtotal">
+                                                <th>Subtotal</th>
+                                                <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>303.00</span>
+                                                </td>
+                                            </tr>
 
-                                    <div class="side-item">
-                                        <div class="side-image">
-                                            <a href="#" class="small-fix-size">
-                                                <img src="assets/img/blog/mountain-263x175.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="side-item-text">
-                                            <h4 class="side-title-post">
-                                                <a href="#">Memories from Last Summer</a>
-                                            </h4>
-                                            <span class="side-item-meta">
-                                                <time class="entry-date published" datetime="2017-06-07T13:46:15+00:00">June 7, 2017</time>
-                                            </span>
-                                        </div>
-                                    </div>
+                                            <tr class="woocommerce-shipping-totals shipping">
+                                                <th>Shipping</th>
+                                                <td data-title="Shipping" class="shipping-cart">
+                                                    <select name="shipping">
+                                                        <option>Free shipping</option>
+                                                        <option>Flat rate</option>
+                                                        <option>Local pickup</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr class="update-total-cart">
+                                                <td colspan="2">
+                                                    <select name="shipping">
+                                                        <option>VietNam</option>
+                                                        <option> England</option>
+                                                        <option>China</option>
+                                                        <option>Japan</option>
+                                                    </select>
+                                                    <input type="text" placeholder="City">
+                                                    <input type="text" placeholder="Post Code(Zip)">
+                                                    <button class="update-total button">Update Total</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-total">
+                                                <th>Total</th>
+                                                <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>303.00</span></strong>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
 
-                                    <div class="side-item">
-                                        <div class="side-image">
-                                            <a href="#" class="small-fix-size">
-                                                <img src="assets/img/blog/girl-style-263x175.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="side-item-text">
-                                            <h4 class="side-title-post">
-                                                <a href="#">Memories from Last Summer</a>
-                                            </h4>
-                                            <span class="side-item-meta">
-                                                <time class="entry-date published" datetime="2017-06-07T13:46:15+00:00">June 7, 2017</time>
-                                            </span>
+                                        <div class="wc-proceed-to-checkout">
+                                            <a href="simplecheckout.html" class="checkout-button button alt wc-forward">Checkout</a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="penci_latest_news_widget">
-                                <h4 class="widget-title penci-border-arrow">
-                                    <span class="inner-arrow">Categories</span>
-                                </h4>
-                                <div class="side-newsfeed">
-                                    <ul>
-                                        <li class="cat-item">
-                                            <a href="#">Adventures
-                                                <span class="category-item-count">(2)</span>
-                                            </a>
-                                        </li>
-                                        <li class="cat-item">
-                                            <a href="#">Featured 
-                                                <span class="category-item-count">(6)</span>
-                                            </a>
-                                        </li>
-                                        <li class="cat-item">
-                                            <a href="#">Life Style
-                                                <span class="category-item-count">(5)</span>
-                                            </a>
-                                        </li>
-                                        <li class="cat-item">
-                                            <a href="#">Memories
-                                                <span class="category-item-count">(1)</span>
-                                            </a>
-                                        </li>
-                                        <li class="cat-item">
-                                            <a href="#">Music
-                                                <span class="category-item-count">(12)</span>
-                                            </a>
-                                        </li>
-                                        <li class="cat-item">
-                                            <a href="#">Travel 
-                                                <span class="category-item-count">(8)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
