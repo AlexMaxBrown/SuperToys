@@ -81,26 +81,14 @@ $(function() {
 		}
 	};
 
-	$(window).on('load', function() {
-
-		$('.lang-toggle').on('click', function() {
-			o.toggleClass('lang-menu-active');
-		});
+	$('.lang-toggle').on('click', function() {
+		o.toggleClass('lang-menu-active');
 	});
-
-	$('.lang-toggle').click(function(event) {
-        o.toggleClass('lang-menu-active');
-	});
-	
-	jQuery(document).mouseup(function (e){ // событие клика по веб-документу
-         
-		var div = $('.lang-menu'); // тут указываем ID элемента
-		  
-		if (!div.is(e.target) // если клик был не по нашему блоку
-			&& div.has(e.target).length === 0  // и не по его дочерним элементам
-			&& div.find('input:focus').length === 0 ) {  // и инпуты при этом не в фокусе
-				$( ".lang-menu" ).removeClass( "lang-menu-active" )
+	$(document).on('click', function(e) {
+		if (!$(e.target).closest(".lang-toggle").length) {
+		  o.removeClass( "lang-menu-active" );
 		}
+		e.stopPropagation();
 	});
 
 });
