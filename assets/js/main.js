@@ -1,4 +1,6 @@
 $(function() {
+	var o = $('.lang-menu');
+	e = $('#search');
     new Swiper(".swiper-container", {
         loop: !0,
         spaceBetween: 30,
@@ -71,12 +73,34 @@ $(function() {
 
 	function onInputFocus( ev ) {
 		classie.add( ev.target.parentNode, 'input--filled' );
-	}
+	};
 
 	function onInputBlur( ev ) {
 		if( ev.target.value.trim() === '' ) {
 			classie.remove( ev.target.parentNode, 'input--filled' );
 		}
-	}
+	};
+
+	$(window).on('load', function() {
+
+		$('.lang-toggle').on('click', function() {
+			o.toggleClass('lang-menu-active');
+		});
+	});
+
+	$('.lang-toggle').click(function(event) {
+        o.toggleClass('lang-menu-active');
+	});
+	
+	jQuery(document).mouseup(function (e){ // событие клика по веб-документу
+         
+		var div = $('.lang-menu'); // тут указываем ID элемента
+		  
+		if (!div.is(e.target) // если клик был не по нашему блоку
+			&& div.has(e.target).length === 0  // и не по его дочерним элементам
+			&& div.find('input:focus').length === 0 ) {  // и инпуты при этом не в фокусе
+				$( ".lang-menu" ).removeClass( "lang-menu-active" )
+		}
+	});
 
 });
