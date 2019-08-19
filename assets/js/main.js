@@ -4,7 +4,8 @@ $(function() {
     new Swiper(".swiper-container", {
         loop: !0,
         spaceBetween: 30,
-        centeredSlides: !0,
+		centeredSlides: !0,
+		autoHeight: true,
         autoplay: {
             delay: 5600,
             disableOnInteraction: !1
@@ -90,5 +91,17 @@ $(function() {
 		}
 		e.stopPropagation();
 	});
+	$('.categoti-menu-btn').click(function(){
+		if ($('.categoti-menu').css('display') == 'none')
+		{
+			$('.categoti-menu').css('display','block');
+		} else { $('.categoti-menu').removeAttr("style"); }
+	})
 
+	$( window ).resize(function(){
+	    var width = $( window ).width();
+	    if(width >= 1190) {
+			$('.categoti-menu').removeAttr("style");
+		}
+	});
 });
