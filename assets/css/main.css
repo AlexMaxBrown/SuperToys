@@ -216,7 +216,7 @@ dd {
 }
 
 .swiper-container {
-    min-height: 625px;
+    height: auto;
     margin-top: -359px
 }
 
