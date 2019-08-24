@@ -222,6 +222,7 @@ dd {
 .sliter-2 .swiper-slide img {
     max-width: 100%;
     height: auto;
+    max-height: 100px;
 }
 
 .slider-block-product .swiper-container {
@@ -784,8 +785,8 @@ dd {
 
 .product-logo-block {
     padding: 0 12px;
-    height: 90px;
-    line-height: 90px;
+    height: 100px;
+    line-height: 100px;
     text-align: center;
 }
 
