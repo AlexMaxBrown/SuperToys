@@ -1,7 +1,7 @@
 $(function() {
 	var o = $('.lang-menu');
 	e = $('#search');
-    new Swiper(".swiper-container", {
+    var swiper_one = new Swiper(".slider-1", {
         loop: !0,
         spaceBetween: 30,
 		centeredSlides: !0,
@@ -14,13 +14,45 @@ $(function() {
             el: ".swiper-pagination",
             clickable: !0
         }
-    }), $('a[href="#search"]').on("click", function(e) {
+    });
+
+     var swiper_two = new Swiper('.sliter-2', {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        pagination: {
+            el: '.swiper-pagination-product',
+            clickable: true,
+            preventClicksPropagation: true,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            }
+        }
+    });
+
+    $('a[href="#search"]').on("click", function(e) {
         e.preventDefault(), $("#search").addClass("open"), $('#search > form > input[type="search"]').focus()
-    }), $("#search, #search button.close").on("click keyup", function(e) {
+    });
+    $("#search, #search button.close").on("click keyup", function(e) {
         e.target != this && "close" != e.target.className && 27 != e.keyCode || $(this).removeClass("open")
-    }), $("form").submit(function(e) {
+    });
+    $("form").submit(function(e) {
         return e.preventDefault(), !1
-    })
+    });
 	jQuery('.prev').on('click', function (e) {
 		e.stopImmediatePropagation();
 		var btn_group_parent = $(this).closest('.btn-group');
