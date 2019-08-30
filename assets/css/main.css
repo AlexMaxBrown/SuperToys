@@ -221,6 +221,7 @@ dd {
 
 .sliter-2 .swiper-slide img {
     max-width: 100%;
+	width: auto;
     height: auto;
     max-height: 100px;
 }
@@ -231,8 +232,8 @@ dd {
 }
 
 .swiper-slide img {
-    max-width: 100%;
-    height: 100vh
+    width: 100%;
+    height: auto;
 }
 
 .logo {
@@ -423,9 +424,20 @@ dd {
 }
 
 .pagination-block {
-    width: 50px;
+    max-width: 100%;
     height: 35px;
-    margin: 10px auto
+    margin: 10px 0;
+	text-align: center;
+}
+
+.pagination-block .swiper-pagination-bullet{
+	width: 15px;
+    height: 15px;
+	margin: 0 5px;
+}
+
+.pagination-block .swiper-pagination-bullet-active {
+	background: #fdd302;
 }
 
 .swiper-pagination {
@@ -491,7 +503,8 @@ dd {
 
 .product {
     max-width: 290px;
-    min-height: 440px;
+    min-height: auto;
+	padding: 1rem 0;
     margin: auto;
     border-radius: 10px;
     border: solid 1px fff
@@ -506,13 +519,14 @@ dd {
 }
 
 .productimg {
+	padding: 5px 5px;
     overflow: hidden
 }
 
 .product a img {
     display: block;
-    width: 215px;
-    height: 286px;
+    max-width: 70%;
+    
     margin: 5px auto
 }
 
@@ -625,13 +639,13 @@ dd {
 
 .slider-block-product {
     max-width: 580px;
-    min-height: 580px;
+    min-height: auto;
     padding: 12px
 }
 
 .slider-block-product .swiper-slide img {
-    max-width: 457px;
-    height: 457px
+    max-width: 100%;
+    height: auto;
 }
 
 .bell {
@@ -5118,6 +5132,13 @@ h3.inner-hdng-agileinfo {
 }
 
 @media (max-width: 994px) {
+	
+	.slider-block-product {
+		margin: auto;
+		height: auto;
+		min-height: auto;
+	}
+	
     .swiper-container {
         margin: 0;
         min-height: auto
@@ -5255,10 +5276,10 @@ h3.inner-hdng-agileinfo {
 
 @media only screen and (max-width: 360px) {
     .slider-block-product .swiper-slide img {
-        height: 385px
+        /*height: 385px*/
     }
     .slider-block-product {
-        min-height: 510px
+        /*min-height: 510px*/
     }
 }
 
